@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Music player</title>
+</head>
+<body>
+    <main>
+        <div class="music__player">
+            <!-- Dashboard -->
+            <div class="music__dashboard">
+                <!-- Light/Dark -->
+                 <div class="mode">
+                    <i class=" ldMode fa-solid fa-sun "></i>
+                 </div>
+                <!-- Header -->
+                <div class="music__header">
+                    <p class="music__header--now">Now playing:</p>
+                    <h1 class="music__header--name"></h1>
+                </div>
+                <!-- Body -->
+                <div class="music__body">
+                    <div class="music__body--img">
+                       
+                    </div>
+                </div>
+                <!-- Control -->
+                 <div class="music__control">
+                    
+                    <div class="music__control-icon">
+                    <i class=" play__icon fa-solid fa-rotate-right"></i>
+                    </div>
+
+                    <div class="music__control-icon music__control-icon--back music__control-icon-nb">
+                        <i class=" play__icon fa-solid fa-backward"></i>
+                        </div>
+                    
+                    <div class=" music__control--play">
+                        <i   class=" play__icon fa-solid fa-play "></i>
+                        <i class=" play__icon  fa-stop disable"></i>
+                        </div>
+
+                    <div class="music__control-icon  music__control-icon--next music__control-icon-nb">
+                        <i class=" play__icon fa-solid fa-forward"></i>
+                      </div>
+
+                      <div class="music__control-icon">
+                        <i class=" play__icon fa-solid fa-shuffle "></i>
+                      </div>
+
+                 </div>
+                 <div class="music__range">
+                    <input class="music__range--audio" type="range" value="0" step="1" min="0" max="100">
+                 </div>
+                 <audio src="" id="audio"></audio>
+            </div>
+            <!-- Playlist -->
+            <div class="music__playlist">
+                <div class="playlist__item ">
+                    <div class="playlist__img">
+                        <img src="./assets/img/nevada.png" alt="">
+                    </div>
+                    <div class="playlist__info">
+                        <p class="playlist__info--name">Nevada</p>
+                        <p class="playlist__info--author">Vicetone</p>
+                    </div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="playlist__item ">
+                    <div class="playlist__img">
+                        <img src="./assets/img/thatgirl.png" alt="">
+                    </div>
+                    <div class="playlist__info">
+                        <p class="playlist__info--name">That Girl</p>
+                        <p class="playlist__info--author">Olly Murs</p>
+                    </div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="playlist__item">
+                    <div class="playlist__img">
+                        <img src="./assets/img/tau.png" alt="">
+                    </div>
+                    <div class="playlist__info">
+                        <p class="playlist__info--name">赤伶</p>
+                        <p class="playlist__info--author">DJ名龙 Remix</p>
+                    </div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="main.js"> </script>
+</body>
+</html>

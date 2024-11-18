@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins';
+}
+
+:root {
+    --primary-color: rgb(247, 38, 73);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Music Player */
+.music__player {
+    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 10px;
+}
+
+/* Dashboard */
+.music__dashboard {
+ padding: 15px;
+ position: relative;
+ z-index: 10;
+ box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* Dark/Light */ 
+
+.mode {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Music header */
+.music__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.music__header--now {
+    font-size: .9rem;
+    color: var(--primary-color);
+}
+
+.music__header--name {
+    font-size: 1.15rem;
+}
+
+/* Music body */
+
+.music__body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+}
+
+.music__body--img  {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.music__body--img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Music Control */
+
+.music__control {
+ display: flex;
+ justify-content: space-around;
+ margin-top: 10px;
+}
+
+.music__control-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.music__control-icon-nb:active {
+    color: var(--primary-color);
+}
+
+.music__control--play {
+    padding: 20px 25px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.disable {
+    display: none;
+}
+
+.oncolor {
+    color: var(--primary-color);
+}
+
+
+
+.music__range input {
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.22);
+    border-radius: 2px;
+    outline: none;
+    transition: .3s;
+}
+
+.music__range input:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.music__range input::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Playlist */
+
+.music__playlist {
+    max-height: 200px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow-y: auto;
+}
+
+.music__playlist::-webkit-scrollbar {
+    width: 0;
+}
+
+.playlist__img {
+ width: 50px;
+ height: 50px;
+ object-fit: cover;
+ object-position: center;
+ border-radius: 50%;
+ overflow: hidden;
+
+}
+
+.playlist__img img {
+ width: 100%;
+ height: 100%;
+}
+
+.playlist__item {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+    transition: ease .3s;
+}
+
+.playlist__item:active {
+    background-color: rgba(247, 38, 73, .8);
+    color: white;
+}
+
+.playlist__info {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.playlist__info--name {
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.playlist__info--author {
+    font-size: .7rem;
+}
+
+
+.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.black {
+    background-color: rgb(0, 0, 0);
+}
+
+
+.border-dark {
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+}
+
+.music-play-color {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+
+@media (max-width: 739px) {
+ .music__player {
+    width: 100%;
+ }
+
+ .music__dashboard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+ }
+
+ .music__playlist  {
+    margin-top: 385px;
+    min-height: 400px;
+ }
+
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .music__player {
+        width: 50%;
+    }
+    
+}
+
+@media only screen and (min-witdh: 1024px) {
+
+}
